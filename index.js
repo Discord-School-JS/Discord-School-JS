@@ -7,6 +7,9 @@ const client = new Client({
     ]
 });
 
+// Prefix
+const PREFIX = "/";
+
 // On connecte le bot
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}`)
