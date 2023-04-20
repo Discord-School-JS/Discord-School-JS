@@ -1,9 +1,12 @@
 // Variables & Constantes nécessaires pour le projet
-const { Client, GatewayIntentBits } = require("discord.js");
+const { Client, GatewayIntentBits, messageLink} = require("discord.js");
 const config = require("./config.json");
 const client = new Client({
     intents: [
-        GatewayIntentBits.Guilds
+        GatewayIntentBits.Guilds,
+        GatewayIntentBits.GuildMessages,
+        GatewayIntentBits.MessageContent,
+        GatewayIntentBits.GuildMembers,
     ]
 });
 
@@ -16,8 +19,8 @@ client.on('ready', () => {
 })
 client.login(config.token);
 
-// Exécution des modules :
-const monduleTest = require('./commands/test');
-
-monduleTest.logConsole;
-monduleTest.logConsole2;
+client.on('messageCreate', message => {
+    if(message.content === PREFIX + "ping") {
+        message.reply("pong !");
+    }
+})
