@@ -8,7 +8,7 @@ const client = new Client({
 });
 
 // Prefix
-const PREFIX = "/";
+const PREFIX = config.prefix;
 
 // On connecte le bot
 client.on('ready', () => {
