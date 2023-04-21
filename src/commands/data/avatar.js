@@ -1,9 +1,4 @@
-const { EmbedBuilder, Client, GatewayIntentBits, ApplicationCommandOptionType } = require('discord.js');
-const client = new Client({
-    intents: [
-        GatewayIntentBits.Guilds
-    ]
-});
+const { EmbedBuilder, ApplicationCommandOptionType } = require('discord.js');
 
 module.exports = {
     name: 'avatar',
@@ -20,7 +15,6 @@ module.exports = {
     callback: (client, interaction) => {
         let user = interaction.options.getUser('user') || interaction.member;
         let avatarmention = interaction.options.getUser('mention');
-
         interaction.reply({
             embeds: [
                 new EmbedBuilder()
