@@ -1,9 +1,4 @@
-const { EmbedBuilder, Client, GatewayIntentBits, ApplicationCommandOptionType } = require('discord.js');
-const client = new Client({
-    intents: [
-        GatewayIntentBits.Guilds
-    ]
-});
+const { EmbedBuilder, ApplicationCommandOptionType } = require('discord.js');
 
 module.exports = {
     name: 'avatar',
@@ -12,7 +7,7 @@ module.exports = {
         {
             name: 'mention',
             description: 'L\'utilisateur dont vous souhaitez voir l\'avatar',
-            required: false,
+            required: true,
             type: ApplicationCommandOptionType.User,
         }
     ],
