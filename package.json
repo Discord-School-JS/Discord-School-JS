@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Discord-School-JS/Discord-School-JS#readme",
   "dependencies": {
+    "cpu-stat": "^2.0.1",
     "discord.js": "^14.9.0"
   }
 }
