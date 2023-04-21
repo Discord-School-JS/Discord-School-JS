@@ -7,7 +7,7 @@ module.exports = {
         {
             name: 'mention',
             description: 'L\'utilisateur dont vous souhaitez voir l\'avatar',
-            required: true,
+            required: false,
             type: ApplicationCommandOptionType.User,
         }
     ],
@@ -32,7 +32,7 @@ module.exports = {
             interaction.reply({
                 embeds: [
                     new EmbedBuilder()
-                        .setTitle(`Avatar de ${user.username}`)
+                        .setTitle(`Avatar de ${user.displayName}`)
                         .setURL(`${user.displayAvatarURL({ size: 1024 })}`)
                         // .setDescription(`Avatar de [${avatarmention.username}](${avatarmention.displayAvatarURL({ size: 1024 })})`)
                         .setImage(`${user.displayAvatarURL({ size: 1024 })}`)
