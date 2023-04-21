@@ -33,7 +33,12 @@ module.exports = {
                         {
                             name: 'Ping (Commande désactivée)',
                             value: 'Renvoie Pong !'
-                        })
+                        },
+                        {
+                            name: 'Botinfo',
+                            value: 'Permet d\'afficher les informations du bot'
+                        },
+                        )
                     .setFooter({ text: "Page 1/1", iconURL: "https://cdn.discordapp.com/attachments/1098694057095610511/1098713906177921156/Paper_JE2_BE2.webp"})
                     .setTimestamp()
             ]
