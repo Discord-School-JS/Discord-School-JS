@@ -1,4 +1,10 @@
 {
   "token": "Insérez le token de votre bot discord ici",
-  "prefix": ""
+  "prefix": "",
+
+  "mongodb": "",
+  "everyone": "",
+  "ticketParent": "",
+  "openticket": "",
+  "transcripts": ""
 }
